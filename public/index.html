@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/tailwind.css">
+        <title>Tailwind exercise</title>
+    </head>
+    <body class="overflow-x-hidden">
+        <section class="px-[8%] py-14 bg-gradient-to-r from-lg-red to-vlg-red h-[80vh] relative rounded-bl-[150px]">
+            <header class="flex justify-between items-center z-[100] relative font-ubuntu font-medium">
+                <div class="flex gap-16 items-center">
+                    <img src="../src/images/logo.svg" alt="Blogr" class="object-contain">
+                    <nav class="hidden md:block">
+                        <ul class="list-none flex gap-6 flex-col w-full md:flex-row">
+                            <li>
+                                <div class="nav-element focus:text-vdk-grayish-blue">
+                                    <p>Product</p>
+                                    <img src="../src/images/icon-arrow-light.svg" class="object-contain hidden md:block">
+                                    <img src="../src/images/icon-arrow-dark.svg" class="object-contain block md:hidden">
+                                </div>
+                                <ul class="nav-element-box">
+                                    <li>Overview</li>
+                                    <li>Pricing</li>
+                                    <li>Marketplace</li>
+                                    <li>Features</li>
+                                    <li>Integrations</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="nav-element">
+                                    <p>Company</p>
+                                    <img src="../src/images/icon-arrow-light.svg" class="object-contain hidden md:block">
+                                    <img src="../src/images/icon-arrow-dark.svg" class="object-contain block md:hidden">
+                                </div>
+                                <ul class="nav-element-box">
+                                    <li>About</li>
+                                    <li>Team</li>
+                                    <li>Blog</li>
+                                    <li>Careers</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="nav-element">
+                                    <p>Connect</p>
+                                    <img src="../src/images/icon-arrow-light.svg" class="object-contain hidden md:block">
+                                    <img src="../src/images/icon-arrow-dark.svg" class="object-contain block md:hidden">
+                                </div>
+                                <ul class="nav-element-box">
+                                    <li>Contact</li>
+                                    <li>Newsletter</li>
+                                    <li>Linkedin</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="flex items-center gap-8 hidden md:block">
+                    <a href="#" class="text-[#f3d5d5] hover:text-white hover:underline">Login</a>
+                    <a href="#" class="button">Sign Up</a>
+                </div>
+
+                <img src="../src/images/icon-hamburger.svg" id="hamburger" class="w-[25px] h-[25px] block md:hidden">
+                <img src="../src/images/icon-close.svg" id="hamburger-close" class="w-[25px] h-[25px] hidden md:hidden">
+            </header>
+
+            <div class="flex flex-col items-center justify-center w-full h-[90%] gap-12 relative z-[99]">
+                <div class="text-center text-white flex flex-col gap-5">
+                    <h1 class="text-5xl s md:text-7xl font-bold font-overpass">A modern publishing platform</h1>
+                    <p class="text-lg md:text-xl">Grow your audience and build your online brand</p>
+                </div>
+
+                <div class="flex items-center gap-8 font-ubuntu font-semibold">
+                    <a href="#" class="button">Start for free</a>
+                    <a href="#" id="learn" class="button !text-white border border-white hover:border-transparent">Learn More</a>
+                </div>
+            </div>
+
+            <div class="w-full h-full overflow-hidden absolute top-0 right-0 rounded-bl-[150px]">
+                <div class="overflow-hidden relative">
+                    <img src="../src/images/bg-pattern-intro-desktop.svg" class="relative -top-[1000px] w-[100%] h-[2500px] object-cover">
+                </div>
+            </div>
+        </section>
+
+        <section class="px-[8%] py-14 flex flex-col items-center font-overpass gap-14 overflow-hidden h-screen">
+            <h1 class="text-vdk-blue text-4xl font-bold mt-14">Designed for the future</h1>
+            <div class="flex mt-14 relative">
+                <div class="flex flex-col gap-10 w-[50%]">
+                    <div class="text-row">
+                        <h2>Introducing an extensible editor</h2>
+                        <p>
+                            Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. 
+                            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, 
+                            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or 
+                            change the looks of a blog.
+                        </p>
+                    </div>
+    
+                    <div class="text-row">
+                        <h2>Robust content management</h2>
+                        <p>
+                            Flexible content management enables users to easily move through posts. Increase the usability of your blog 
+                            by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="../src/images/illustration-editor-desktop.svg" class="w-[925px] h-[882px] object-cover absolute -right-[calc(20%+10rem)] 2xl:-right-[20%] -top-[calc(70%-3rem)] 2xl:-top-[70%]">
+            </div>
+        </section>
+
+        <section class="px-[8%] py-14 bg-gradient-to-r from-[#2c2d3f] to-[#3f4164] relative rounded-bl-[150px] rounded-tr-[150px]">
+            <div class="flex items-center justify-center gap-16 z-[100] relative h-[300px]">
+                <img src="../src/images/illustration-phones.svg" class="relative -bottom-3">
+                <div class="flex flex-col gap-3 w-[600px]">
+                    <h1 class="text-white text-4xl font-semibold">State of the Art Infrastructure</h1>
+                    <p class="text-white text-lg">
+                        With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
+                        This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full h-full overflow-hidden absolute top-0 -scale-y-100 right-0">
+                <div class="overflow-hidden relative">
+                    <img src="../src/images/bg-pattern-circles.svg" class="relative -top-20">
+                </div>
+            </div>
+        </section>
+
+        <section class="px-[8%] py-14 font-overpass overflow-hidden h-screen">
+            <div class="flex relative h-full justify-end items-center">
+                <div class="flex flex-col gap-10 w-[50%]">
+                    <div class="text-row">
+                        <h2>Free, open, simple</h2>
+                        <p>
+                            Blogr is a free and open source application backed by a large community of helpful developers. It supports 
+                            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, 
+                            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+                        </p>
+                    </div>
+    
+                    <div class="text-row">
+                        <h2>Powerful tooling</h2>
+                        <p>
+                            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+                            capable of producing even the most complicated sites.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="../src/images/illustration-laptop-desktop.svg" class="w-[974px] h-[786px] object-cover absolute -left-[calc(20%+10rem)] 2xl:-left-[20%]">
+            </div>
+        </section>
+
+        <section class="bg-vdk-black-blue px-[8%] py-14 rounded-tr-[150px]">
+            <footer class=" flex justify-between items-start w-[90%]">
+                <img src="../src/images/logo.svg" class="object-contain">
+    
+                <div class="footer-list">
+                    <p>Product</p>
+                    <ul>
+                        <li>Overview</li>
+                        <li>Pricing</li>
+                        <li>Marketplace</li>
+                        <li>Features</li>
+                        <li>Integrations</li>
+                    </ul>
+                </div>
+    
+                <div class="footer-list">
+                    <p>Company</p>
+                    <ul>
+                        <li>About</li>
+                        <li>Team</li>
+                        <li>Blog</li>
+                        <li>Careers</li>
+                    </ul>
+                </div>
+    
+                <div class="footer-list">
+                    <p>Connect</p>
+                    <ul>
+                        <li>Contact</li>
+                        <li>Newsletter</li>
+                        <li>Linkedin</li>
+                    </ul>
+                </div>
+            </footer>
+        </section>
+        
+
+        <div class="attribution bg-vdk-black-blue text-vlg-red text-center">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Fifo</a>.
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

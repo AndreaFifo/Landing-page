@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav ul li{
+    position: relative;
+}
+
+.nav-element{
+    @apply flex gap-2 items-center justify-center
+}
+
+@media (min-width: 768px){
+    .nav-element:hover ~ .nav-element-box{
+        display: block;
+    }
+    
+    .nav-element-box:hover{
+        display: block;
+    }
+    
+    .nav-element-box:focus-within{
+        display: block;
+    }
+}
+
+.nav-element p{
+    @apply text-vdk-blue active:text-vdk-grayish-blue md:hover:text-white md:hover:underline hover:cursor-pointer md:text-[#f3d5d5] font-semibold
+}
+
+.nav-element-box{
+    /* @apply absolute left-1/2 -translate-x-1/2 hidden flex flex-col space-y-2 text-vdk-black-blue bg-white py-6 px-5 rounded-md drop-shadow-lg z-50 */
+    @apply bg-[#EFEFF1] text-center flex flex-col space-y-5 py-6 px-5 text-vdk-grayish-blue rounded-md mt-2 hidden
+}
+
+.show-nav-element-box{
+    @apply block
+}
+
+.nav-element-box li{
+   @apply hover:text-lg-red hover:cursor-pointer
+}
+
+.button{
+    @apply h-max px-10 py-3 rounded-full text-lg-red bg-white hover:text-white hover:bg-hover
+}
+
+.text-row{
+    @apply flex flex-col gap-4
+}
+
+.text-row h2{
+    @apply text-vdk-blue text-2xl font-semibold
+}
+
+.text-row p{
+    @apply text-vdk-grayish-blue text-lg
+}
+
+.footer-list{
+    @apply flex flex-col gap-4 text-white
+}
+
+.footer-list p{
+    @apply font-semibold text-lg
+}
+
+.footer-list ul li{
+    @apply text-vdk-grayish-blue
+}
+
+.footer-list ul li:hover{
+    @apply text-white cursor-pointer underline
+}
+
+#learn{
+    background: transparent;
+}
+
+#learn:hover{
+    background: rgb(255 123 136);
+}
+
+.show-nav{
+    @apply bg-white absolute top-16 left-1/2 -translate-x-1/2 w-full py-6 px-6 flex items-center justify-center rounded-md drop-shadow-2xl sm:max-w-sm
+}
