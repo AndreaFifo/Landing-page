@@ -44,7 +44,7 @@ nav ul li{
 }
 
 .button{
-    @apply h-max px-10 py-3 rounded-full text-lg-red bg-white hover:text-white hover:bg-hover
+    @apply h-max px-10 py-3 rounded-full text-lg-red bg-white hover:text-white hover:bg-hover;
 }
 
 .text-row{

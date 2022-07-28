@@ -7,6 +7,11 @@ module.exports = {
         "overpass": "Overpass",
         "ubuntu": "Ubuntu"
       },
+      fontSize: {
+        "headers": "clamp(1.563rem, -0.5349rem + 10.4893vw, 4.5rem);",
+        "section-titles": "clamp(1.563rem, 1.0723rem + 2.4536vw, 2.25rem);",
+
+      },
       backgroundImage: {
         'blue-circle': "url('../../src/images/bg-pattern-circles.svg')"
       }
