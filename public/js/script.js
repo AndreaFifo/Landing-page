@@ -27,7 +27,6 @@ closeHamburger.addEventListener("click", () => {
 if(screen.width < 768){
     const navElements = document.querySelectorAll(".nav-element");
     const navElementsBox = document.querySelectorAll(".nav-element-box")
-    const arrows = document.querySelectorAll("")
     navElements.forEach((navElement, i) => {
         navElement.addEventListener("click", () => {
             if(navElementsBox[i].classList.contains("show-nav-element-box"))
