@@ -28,16 +28,17 @@ html, body{
 }
 
 section{
-    padding: 5rem 8%;
+    padding: 3rem 8%;
 }
 
+/* ====== HEADER ====== */
 header{
     display: flex;
     align-items: center;
     gap: 70px;
     font-family: "Ubuntu";
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 .right-side{
@@ -111,6 +112,15 @@ nav ul li .nav-element-box{
     gap: 20px;
 }
 
+@media screen and (max-width: 419px){
+    .center-side .btn-header{
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
 .btn{
     background: white;
     padding: 10px 35px;
@@ -138,7 +148,7 @@ nav ul li .nav-element-box{
     transform: rotate(180deg);
 }
 
-
+/* ====== RESPONSIVE HEADER ====== */
 @media screen and (max-width: 864px) {
     header{
         justify-content: space-between;
@@ -204,14 +214,14 @@ nav ul li .nav-element-box{
         display: flex !important;
     }
 
-    .btn-header{
+    .right-side .btn-header{
         width: 100%;
         align-items: center;
         flex-direction: column;
         gap: 10px;
     }
 
-    .btn-header::before{
+    .right-side .btn-header::before{
         content: "";
         position: relative;
         background: var(--grayish-blue);
@@ -246,10 +256,10 @@ nav ul li .nav-element-box{
     }
 }
 
+/* ====== HERO SECTION ====== */
 .hero{
     height: 80vh;
     min-height: 600px;
-    padding-top: 3rem;
     background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
     display: flex;
     flex-direction: column;
@@ -330,4 +340,156 @@ nav ul li .nav-element-box{
     top: -700px;
     width: 100%;
     height: 2000px;
+}
+
+/* ====== EDITOR / LAPTOP SECTION ====== */
+.editor, .laptop{
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    font-family: "Overpass";
+    padding-top: 5rem;
+    margin: 100px 0;
+}
+
+.laptop{
+    display: flex;
+    justify-content: center;
+}
+
+.editor h1{
+    color: var(--vdk-blue);
+    font-size: clamp(1.563rem, 1.0723rem + 2.4536vw, 2.25rem);
+    text-align: center;
+}
+
+.editor .editor-content, .laptop .laptop-content{
+    position: relative;
+    display: flex;
+}
+
+.laptop .laptop-content{
+    flex-direction: row-reverse;
+}
+
+.editor-content .editor-text, .laptop-content .laptop-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-right: 20px;
+    max-width: 600px;
+}
+
+.paragraph{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.paragraph h2{
+    color: var(--vdk-blue);
+}
+
+.paragraph p{
+    color: var(--vdk-grayish-blue);
+    font-size: 18px;
+    line-height: 1.75rem;
+}
+
+.editor-content img, .laptop-content img{
+    width: 90%;
+    max-width: 825px;
+    max-height: 882px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(-20% - 10rem);
+}
+
+.laptop-content img{
+    max-width: 974px;
+    max-height: 786px;
+    right: 0;
+    left: calc(-20% - 10rem)
+}
+
+@media screen and (min-width: 1320px) {
+    .editor-content img{
+        right: -23%;
+    }
+
+    .laptop-content img{
+        left: -30%;
+    }
+}
+
+/* ====== RESPONSIVE EDITOR / LAPTOP SECTION ====== */
+@media screen and (max-width: 864px){
+    .editor, .laptop{
+        height: max-content;
+    }
+
+    .editor .editor-content, .laptop .laptop-content{
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    .editor-content .editor-text, .laptop-content .laptop-text{
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+    }
+    
+    .editor-content img, .laptop-content img{
+        width: 100%;
+        max-width: 500px;
+        min-width: 300px;
+        max-height: 430px;
+        position: relative;
+        top: 0;
+        transform: none;
+        right: 0;
+        left: 0;
+    }
+}
+
+/* ====== PHONES SECTION ====== */
+.phones{
+    height: 50vh;
+    min-height: 300px;
+    background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%));
+    display: flex;
+    position: relative;
+    gap: 5rem;
+    font-family: "Overpass";
+    padding: 2rem 8%;
+    margin: 100px 0;
+}
+
+.phones-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    z-index: 3;
+}
+
+.phones-content .paragraph p{
+    color: white;
+}
+
+.phones-content .paragraph h1{
+    font-size: clamp(1.563rem, 1.0723rem + 2.4536vw, 2.25rem);
+    color: white;
+}
+
+.phones .pattern-container img{
+    object-fit: contain;
+    top: -500px;
+    left: -400px;
+    height: 1000px;
 }

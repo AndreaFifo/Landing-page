@@ -2,9 +2,6 @@ const hamburger = document.getElementById("hamburger");
 const closeHamburger = document.getElementById("hamburger-close");
 const rightSide = document.querySelector(".right-side");
 
-if(screen.width < 865)
-    rightSide.classList.add("hidden");
-
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("hidden");
 
