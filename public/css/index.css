@@ -28,16 +28,7 @@ html, body{
 }
 
 section{
-    padding: 14rem 8%;
-}
-
-.hero{
-    height: 80vh;
-    min-height: 600px;
-    padding-top: 3rem;
-    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
-    display: flex;
-    flex-direction: column;
+    padding: 5rem 8%;
 }
 
 header{
@@ -46,6 +37,7 @@ header{
     gap: 70px;
     font-family: "Ubuntu";
     position: relative;
+    z-index: 2;
 }
 
 .right-side{
@@ -121,7 +113,7 @@ nav ul li .nav-element-box{
 
 .btn{
     background: white;
-    padding: 10px 30px;
+    padding: 10px 35px;
     border-radius: 155px;
     text-decoration: none;
     color: var(--lg-red);
@@ -252,4 +244,90 @@ nav ul li .nav-element-box{
     .hidden{
         display: none;
     }
+}
+
+.hero{
+    height: 80vh;
+    min-height: 600px;
+    padding-top: 3rem;
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 0 0 0 150px;
+}
+
+.center-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.center-side .text{
+    text-align: center;
+    color: white;
+    font-family: "Overpass";
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.center-side .text h1{
+    font-size: clamp(1.563rem, -0.5349rem + 10.4893vw, 4.5rem);
+    line-height: 1;
+}
+
+.center-side .text p{
+    font-size: clamp(1rem, 0.8801rem + 0.6849vw, 1.25rem);
+}
+
+.center-side .btn-header{
+    font-family: "Ubuntu";
+}
+
+.center-side .btn-header .btn:nth-child(1){
+    background: white;
+    color: var(--lg-red);
+}
+
+.center-side .btn-header .btn:nth-child(2){
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.center-side .btn-header .btn:nth-child(1):hover{
+    color: white;
+}
+
+.center-side .btn-header .btn:nth-child(2):hover{
+    border-color: var(--hover);
+}
+
+.pattern-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0 0 0 150px;
+    z-index: 1;
+}
+
+.pattern-container div{
+    position: relative;
+}
+
+.pattern-container div img{
+    object-fit: cover;
+    position: relative;
+    top: -700px;
+    width: 100%;
+    height: 2000px;
 }
