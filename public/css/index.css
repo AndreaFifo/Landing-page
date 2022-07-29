@@ -10,3 +10,246 @@
     --vdk-black-blue: hsl(240, 10%, 16%);
     --hover: #FF7B88;
 }
+
+picture{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+section{
+    padding: 14rem 8%;
+}
+
+.hero{
+    height: 80vh;
+    min-height: 600px;
+    padding-top: 3rem;
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-family: "Ubuntu";
+    position: relative;
+}
+
+.right-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li{
+    cursor: pointer;
+    position: relative;
+}
+
+nav ul li .nav-element{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-element p{
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-element p:hover{
+    text-decoration: underline 2px white;
+}
+
+@media screen and (min-width: 865px) {
+    nav ul li .nav-element:hover ~ .nav-element-box,
+    .nav-element-box:hover, .nav-element-box:focus-within{
+        display: flex;
+    }
+}
+
+nav ul li .nav-element-box{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.nav-element-box li{
+    font-weight: 400;
+    color: var(--vdk-black-blue);
+}
+
+.nav-element-box li:hover{
+    color: var(--lg-red);
+}
+
+.btn-header{
+    display: flex;
+    gap: 20px;
+}
+
+.btn{
+    background: white;
+    padding: 10px 30px;
+    border-radius: 155px;
+    text-decoration: none;
+    color: var(--lg-red);
+    font-weight: 600;
+}
+
+.btn-header .btn:nth-child(1){
+    background: none;
+    color: white;
+}
+
+.btn:hover{
+    background: var(--hover) !important;
+    color: white;
+}
+
+.hamburger{
+    display: none;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+
+@media screen and (max-width: 864px) {
+    header{
+        justify-content: space-between;
+    }
+
+    .right-side{
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+        background: white;
+        padding: 32px;
+        border-radius: 8px;
+        max-width: 400px;
+        height: max-content;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-element p{
+        font-size: 16px;
+        color: var(--vdk-blue);
+        font-weight: 600;
+    }
+
+    nav ul li .nav-element-box{
+        top: 0;
+        left: 0;
+        transform: none;
+        position: relative;
+        background: #EFEFF1;
+        width: 100%;
+    }
+    
+    .nav-element-box li{
+        font-weight: 500;
+        color: var(--vdk-grayish-blue);
+    }
+    
+    .nav-element-box li:hover{
+        color: var(--lg-red);
+    }
+
+    .show-nav-element-box{
+        display: flex !important;
+    }
+
+    .btn-header{
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-header::before{
+        content: "";
+        position: relative;
+        background: var(--grayish-blue);
+        width: 100%;
+        height: 2px;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.4;
+    }
+    
+    .btn-header .btn:nth-child(1){
+        background: none;
+        color: var(--vdk-blue);
+    }
+
+    .btn-header .btn:nth-child(1):active, .btn-header .btn:nth-child(1):hover{
+        color: white;
+    }
+
+    .btn-header .btn:nth-child(2){
+        background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+        color: white;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .hidden{
+        display: none;
+    }
+}
